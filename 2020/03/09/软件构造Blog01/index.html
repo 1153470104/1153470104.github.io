@@ -40,39 +40,61 @@
         </header>
 
         <main id="content">
-        
+        <% permalink = config.url + config.root + post.path %>
 
 <article class="post">
-  March 9, 2020
-  
+  <%= date(post.date, 'MMMM D, YYYY') %>
+  <% if (post.tags && post.tags.length){ %>
+    <span class="taglist">  &middot; 
+    <% count = post.tags.length %>
+    <% post.tags.forEach(function(tag, index) { %>
+      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
+    <% }); %>
+    </span>
+  <% } %>
 
-  <h1 class="post-title">软件构造Blog01</h1>
+  <h1 class="post-title"><%- post.title %></h1>
   <section class="post-content article-entry">
-    <p>第一次搭建自己的blog，也是HIT软件构造课程的作业要求。是软件构造日志的第一篇，也是本博客的第一篇，森林里有两条路，我选择了第三条，希望可以走出来。</p>
-<a id="more"></a>
-
-<h3 id="关于软件构造课程"><a href="#关于软件构造课程" class="headerlink" title="关于软件构造课程"></a>关于软件构造课程</h3><h3 id="实验一"><a href="#实验一" class="headerlink" title="实验一"></a>实验一</h3><h4 id="1-MagicSquare"><a href="#1-MagicSquare" class="headerlink" title="1.MagicSquare"></a>1.MagicSquare</h4><h4 id="2-Turtle"><a href="#2-Turtle" class="headerlink" title="2.Turtle"></a>2.Turtle</h4><h4 id="3-FriendshipGraph"><a href="#3-FriendshipGraph" class="headerlink" title="3.FriendshipGraph"></a>3.FriendshipGraph</h4><p>第三个实验也是利用了一些基本的java特性，用来完成这个作业。</p>
-<h3 id="目标体会"><a href="#目标体会" class="headerlink" title="目标体会"></a>目标体会</h3>
+    <%- post.content %>
   </section>
   <footer class="post-footer">
     <!--
     <section class="author">
-      <h4>Shensl</h4>
-      <p></p>
+      <h4><%- config.author %></h4>
+      <p><%- theme.bio %></p>
     </section>
     -->
   </footer>
 </article>
 
 <nav class="pagination" role="pagination">
-    
-    <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/2020/03/16/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0Blog02/">
-        <!--软件构造Blog02--> ← next
+    <% if (page.next) { %>
+    <a class="newer-posts" href="<%- url_for(page.next.path) %>">
+        prev →<!--<%- page.next.title %>-->
     </a>
-    
+    <% } %>
+    <span class="page-number">•</span>
+    <% if (page.prev) { %>
+    <a class="older-posts" href="<%- url_for(page.prev.path) %>">
+        <!--<%- page.prev.title %>--> ← next
+    </a>
+    <% } %>
 </nav>
+<% if (theme.disqus) { -%>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '<%- theme.disqus %>';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<% } -%>
 
 
         </main>

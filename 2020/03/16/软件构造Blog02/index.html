@@ -40,36 +40,61 @@
         </header>
 
         <main id="content">
-        
+        <% permalink = config.url + config.root + post.path %>
 
 <article class="post">
-  March 16, 2020
-  
+  <%= date(post.date, 'MMMM D, YYYY') %>
+  <% if (post.tags && post.tags.length){ %>
+    <span class="taglist">  &middot; 
+    <% count = post.tags.length %>
+    <% post.tags.forEach(function(tag, index) { %>
+      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
+    <% }); %>
+    </span>
+  <% } %>
 
-  <h1 class="post-title">软件构造Blog02</h1>
+  <h1 class="post-title"><%- post.title %></h1>
   <section class="post-content article-entry">
-    <a id="more"></a>
-<h3 id="环境与配置"><a href="#环境与配置" class="headerlink" title="环境与配置"></a>环境与配置</h3><h4 id="eclipse"><a href="#eclipse" class="headerlink" title="eclipse"></a>eclipse</h4><h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><h4 id="build-tool"><a href="#build-tool" class="headerlink" title="build tool"></a>build tool</h4>
+    <%- post.content %>
   </section>
   <footer class="post-footer">
     <!--
     <section class="author">
-      <h4>Shensl</h4>
-      <p></p>
+      <h4><%- config.author %></h4>
+      <p><%- theme.bio %></p>
     </section>
     -->
   </footer>
 </article>
 
 <nav class="pagination" role="pagination">
-    
-    <a class="newer-posts" href="/2020/03/09/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0Blog01/">
-        prev →<!--软件构造Blog01-->
+    <% if (page.next) { %>
+    <a class="newer-posts" href="<%- url_for(page.next.path) %>">
+        prev →<!--<%- page.next.title %>-->
     </a>
-    
+    <% } %>
     <span class="page-number">•</span>
-    
+    <% if (page.prev) { %>
+    <a class="older-posts" href="<%- url_for(page.prev.path) %>">
+        <!--<%- page.prev.title %>--> ← next
+    </a>
+    <% } %>
 </nav>
+<% if (theme.disqus) { -%>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '<%- theme.disqus %>';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<% } -%>
 
 
         </main>
