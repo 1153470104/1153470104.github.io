@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="/images/Avatar.jpg"/>
         <link rel="canonical" href="http://guolinn.com/">
         <link rel="alternate" type="application/rss+xml" title="Shensl" href="">
-        <title>Archives: 2020 | ALEX SHEN</title>
+        <title>毕设日志02 | ALEX SHEN</title>
         <meta name="description" content="{{meta_description}}">
 
         <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     <meta name="generator" content="Hexo 4.2.0"></head>
     
-		<body class="home-template">
+		<body class="post-template">
 	
 
         <header id="header">
@@ -40,30 +40,34 @@
         </header>
 
         <main id="content">
-        <% page.posts.each(function(post) { %>
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
+        
+
+<article class="post">
+  April 16, 2020
   
-  <span class="separator"> &middot; </span>
-  
-  <%= date(post.date, 'MMMM D, YYYY') %>
-  
-  <% if (post.tags && post.tags.length){ %>
-    <span class="taglist">  &middot; 
-    <% count = post.tags.length %>
-    <% post.tags.forEach(function(tag, index) { %>
-      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
-    <% }); %>
-    </saan>
-  <% } %>
-  </h3>
-</section>
-<% }); %>
+
+  <h1 class="post-title">毕设日志02</h1>
+  <section class="post-content article-entry">
+    
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>Shensl</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
 <nav class="pagination" role="pagination">
-  <% if (page.prev) { %><a class="newer-posts" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
-  <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
-  <% if (page.next) { %><a class="older-posts" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
+    
+    <a class="newer-posts" href="/2020/04/01/%E6%AF%95%E8%AE%BE%E6%97%A5%E5%BF%9701/">
+        prev →<!--毕设日志01-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
 </nav>
 
 

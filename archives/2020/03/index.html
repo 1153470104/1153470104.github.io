@@ -40,35 +40,30 @@
         </header>
 
         <main id="content">
-        
+        <% page.posts.each(function(post) { %>
 <section id="{{id}}" class="{{post_class}}">
   <h3 class="post-title">
-  <a href="/2020/03/16/软件构造Blog02/">软件构造Blog02</a>
+  <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
   
   <span class="separator"> &middot; </span>
   
-  March 16, 2020
+  <%= date(post.date, 'MMMM D, YYYY') %>
   
-  
+  <% if (post.tags && post.tags.length){ %>
+    <span class="taglist">  &middot; 
+    <% count = post.tags.length %>
+    <% post.tags.forEach(function(tag, index) { %>
+      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
+    <% }); %>
+    </saan>
+  <% } %>
   </h3>
 </section>
-
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2020/03/09/软件构造Blog01/">软件构造Blog01</a>
-  
-  <span class="separator"> &middot; </span>
-  
-  March 9, 2020
-  
-  
-  </h3>
-</section>
-
+<% }); %>
 <nav class="pagination" role="pagination">
-  
-  <span class="page-number">Page 1 of 1</span>
-  
+  <% if (page.prev) { %><a class="newer-posts" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
+  <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
+  <% if (page.next) { %><a class="older-posts" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
 </nav>
 
 

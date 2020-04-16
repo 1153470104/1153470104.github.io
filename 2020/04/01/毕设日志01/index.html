@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="/images/Avatar.jpg"/>
         <link rel="canonical" href="http://guolinn.com/">
         <link rel="alternate" type="application/rss+xml" title="Shensl" href="">
-        <title>Archives: 2020 | ALEX SHEN</title>
+        <title>毕设日志01 | ALEX SHEN</title>
         <meta name="description" content="{{meta_description}}">
 
         <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     <meta name="generator" content="Hexo 4.2.0"></head>
     
-		<body class="home-template">
+		<body class="post-template">
 	
 
         <header id="header">
@@ -40,30 +40,41 @@
         </header>
 
         <main id="content">
-        <% page.posts.each(function(post) { %>
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
+        
+
+<article class="post">
+  April 1, 2020
   
-  <span class="separator"> &middot; </span>
-  
-  <%= date(post.date, 'MMMM D, YYYY') %>
-  
-  <% if (post.tags && post.tags.length){ %>
-    <span class="taglist">  &middot; 
-    <% count = post.tags.length %>
-    <% post.tags.forEach(function(tag, index) { %>
-      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
-    <% }); %>
-    </saan>
-  <% } %>
-  </h3>
-</section>
-<% }); %>
+
+  <h1 class="post-title">毕设日志01</h1>
+  <section class="post-content article-entry">
+    <p>毕设已经开始一个月超过了，我们进展还是很缓慢。景观设计这个让我过去四年绞尽脑汁，艰难求索的学科，在毕业之际仍然不放过我。</p>
+<p>在摸爬滚打四年之后，虽然从来没有进入过行业内部一窥究竟，未来也基本不会从事建筑景观设计，但是跳出来之后我感觉还是看到了很多不一样的东西，先来写点让我过去几年疑惑不解的东西。</p>
+<h3 id="眼见为实？"><a href="#眼见为实？" class="headerlink" title="眼见为实？"></a>眼见为实？</h3><h3 id="静态与动态"><a href="#静态与动态" class="headerlink" title="静态与动态"></a>静态与动态</h3><p>上规划史的时候，好像提了一句，古埃及是静态社会，习俗和科技鲜有变化，整个社会一直跟着尼罗河的规律延续上千年</p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>Shensl</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
 <nav class="pagination" role="pagination">
-  <% if (page.prev) { %><a class="newer-posts" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
-  <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
-  <% if (page.next) { %><a class="older-posts" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
+    
+    <a class="newer-posts" href="/2020/03/16/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0Blog02/">
+        prev →<!--软件构造Blog02-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2020/04/16/%E6%AF%95%E8%AE%BE%E6%97%A5%E5%BF%9702/">
+        <!--毕设日志02--> ← next
+    </a>
+    
 </nav>
 
 
