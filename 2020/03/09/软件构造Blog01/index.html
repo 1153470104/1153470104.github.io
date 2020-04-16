@@ -40,52 +40,61 @@
         </header>
 
         <main id="content">
-        
+        <% permalink = config.url + config.root + post.path %>
 
 <article class="post">
-  March 9, 2020
-  
+  <%= date(post.date, 'MMMM D, YYYY') %>
+  <% if (post.tags && post.tags.length){ %>
+    <span class="taglist">  &middot; 
+    <% count = post.tags.length %>
+    <% post.tags.forEach(function(tag, index) { %>
+      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
+    <% }); %>
+    </span>
+  <% } %>
 
-  <h1 class="post-title">软件构造Blog01</h1>
+  <h1 class="post-title"><%- post.title %></h1>
   <section class="post-content article-entry">
-    <p>第一次搭建自己的blog，也是HIT软件构造课程的作业要求。是软件构造日志的第一篇，也是本博客的第一篇。森林里有两条路，我选择了第三条，希望可以走出来。</p>
-<a id="more"></a>
-
-<h3 id="关于软件构造课程"><a href="#关于软件构造课程" class="headerlink" title="关于软件构造课程"></a>关于软件构造课程</h3><p>作为一个非计算机专业的学生上个学期我是通过外专业课程的方式蹭着计算机学院的课程，但是今年没想到外专业居然限制在了为数不多的几门课程，很遗憾只能掏钱跨专业选这么课程了。之前知道这门课程就是因为看到了某些学霸的blog，没想到现在我自己也得开始写。</p>
-<p>软件构造课程很新，我也没有特别听说过这门全学院都学基础课程到底是面向什么方向知识的，但是说明上写的是借鉴于MIT和CMU的课程（后来看MIT的Textbook感觉他们真的是把这点知识嚼碎了吐出来喂给你吃），所以我觉得不会很亏，所以毅然在毕设的压力之下还是选了这门课。</p>
-<h3 id="实验一"><a href="#实验一" class="headerlink" title="实验一"></a>实验一</h3><p>接下来谈谈对于实验一的体会，几个实验都不是很难，但我都是以非常矫揉造作的形式完成了代码（写完返回来看的时候非常得尴尬）所以接下来谈几个实验里出现的问题。</p>
-<h5 id="MagicSquare"><a href="#MagicSquare" class="headerlink" title="MagicSquare"></a>MagicSquare</h5><p>MagicSquare的要求是编写一个可以读入文件并进行检测的函数，对于我这样的java新手来说，难点其实是如何读入文件，还有应用Java的错误处理机制。这些的话通过Google、CSDN很方便地搞定了。<br>实现很简单，但是测试通过回过头去居然发现我存储读入数据的数据结构居然是一维数组。在开始的时候居然没用想到可以利用二维数据直截了当地存储一个Square。</p>
-<h5 id="Turtle"><a href="#Turtle" class="headerlink" title="Turtle"></a>Turtle</h5><p>Turtle没有很难，（毕竟MIT把实现过程嚼碎了喂给你）就是看英语比较花时间。感觉如果母语是英语或者是较为接近的拉丁字母语言，单单编程的学习曲线会比较平缓吧。在建筑学院的时候曾经用一个软件叫做天正，它的快捷键居然是拼音对应的操作，比如：倒墙角/DQJ，对中国人非常友好。</p>
-<p>但是在其中还是遇到了问题，在导入之后的Package管理方面出现了问题，因为有本来就存在的工程文件，所以在eclipse里我的操作似乎都会出现各种各样的问题。最终我把所有的类分出来重新创建了一个project才解决了这个问题。如果持续遇到这个问题，可以就它写写总结。</p>
-<h5 id="FriendshGraph"><a href="#FriendshGraph" class="headerlink" title="FriendshGraph"></a>FriendshGraph</h5><p>实现也不是很难，这个图采用了邻接表的方式进行实现。但是回国头来我发现还是比较Naive的。因为不想多创建一个EdegeNode文件，我选择了为每条edge new新的person节点，然后用person节点中指向的下一个person来进行这个person vertex的人际关系的表示。比较粗糙而且不符合逻辑。这都是因为我没有想到还可以用Nest Class，明明知道这个概念但是没用运用起来真是非常不应该的。</p>
-<h3 id="其他感受"><a href="#其他感受" class="headerlink" title="其他感受"></a>其他感受</h3><ul>
-<li><p>虽然搞定了文件输入，但是其实我只是看别人用了一个方法我也这么用一下。真正熟悉还是要等到有需求之后的大量练习。</p>
-</li>
-<li><p>另外java里提供数据结构供我们使用实在是非常地方便。每次用的时候都忍不住想起上学期的数据结构课程。</p>
-</li>
-</ul>
-<p><em>接下来说一件跟cs无关的事情，大二三好杯的时候在土木楼训练，当时足球踢得很烂，然后感觉自己没有什么提高的可能了，感觉也就是边后卫踢踢了。当时的队长带着我们训练，他让我们每天都定下一个小目标（虽然现在小目标已经被人搞臭了）每天将一个技术提高一点点，然后日积月累才有提高。而针对这门课程而言，博客应该是一个很好的学习方式，将一些平时很不经意的查询整理、正规化变成博客可能就是一个个小目标达成的过程吧。虽然我现在足球也并不能踢得很好，但其实球技也不是球场上最重要的东西，但最后还是希望这个博客能够记录一些过程吧。</em></p>
-
+    <%- post.content %>
   </section>
   <footer class="post-footer">
     <!--
     <section class="author">
-      <h4>Shensl</h4>
-      <p></p>
+      <h4><%- config.author %></h4>
+      <p><%- theme.bio %></p>
     </section>
     -->
   </footer>
 </article>
 
 <nav class="pagination" role="pagination">
-    
-    <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/2020/03/16/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0Blog02/">
-        <!--软件构造Blog02--> ← next
+    <% if (page.prev) { %>
+    <a class="newer-posts" href="<%- url_for(page.prev.path) %>">
+        ← prev <!--<%- page.prev.title %>-->
     </a>
-    
+    <% } %>
+    <span class="page-number">•</span>
+    <% if (page.next) { %>
+    <a class="older-posts" href="<%- url_for(page.next.path) %>">
+        <!--<%- page.next.title %>--> next →
+    </a>
+    <% } %>
 </nav>
+<% if (theme.disqus) { -%>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '<%- theme.disqus %>';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<% } -%>
 
 
         </main>

@@ -40,65 +40,61 @@
         </header>
 
         <main id="content">
-        
+        <% permalink = config.url + config.root + post.path %>
 
 <article class="post">
-  March 16, 2020
-  
+  <%= date(post.date, 'MMMM D, YYYY') %>
+  <% if (post.tags && post.tags.length){ %>
+    <span class="taglist">  &middot; 
+    <% count = post.tags.length %>
+    <% post.tags.forEach(function(tag, index) { %>
+      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
+    <% }); %>
+    </span>
+  <% } %>
 
-  <h1 class="post-title">软件构造Blog02</h1>
+  <h1 class="post-title"><%- post.title %></h1>
   <section class="post-content article-entry">
-    <a id="more"></a>
-
-<h3 id="环境与配置"><a href="#环境与配置" class="headerlink" title="环境与配置"></a>环境与配置</h3><p>在开始使用新软件的时候会遇到一些令人疑惑的问题，在这里记录一些我自己遇到的小问题。</p>
-<h4 id="Java-Build-Path"><a href="#Java-Build-Path" class="headerlink" title="Java Build Path"></a>Java Build Path</h4><p>第一个小问题是开始的时候错误地为项目添加了JUnit5的jar包，但是后来想要去除更改的时候遇到了很大的问题，最后通过更改Java build path来解决这个问题。<br>这里说明一下Java build path，它就是用于设置在编译时能够用到的Java项目和依赖的类，分为几个小项：源码文件夹、项目、类库。这几个很好理解就是编译时用到的一些源。但是还有两个项目，一个是Order and Export，还有一个是Module Dependencies。</p>
-<ul>
-<li>Order and Export：<br>order指的是各种项目的依赖顺序，而Export指的是在本项目被别的项目依赖的时候，只有exported的源才能被别人利用到</li>
-<li>Module Dependencies：<br>是在高版本java中，可以用来可视化操作各个项目间依赖关系，目前没有用到，将来用到的时候可以研究研究。</li>
-</ul>
-<h4 id="eclipse-GUI"><a href="#eclipse-GUI" class="headerlink" title="eclipse GUI"></a>eclipse GUI</h4><p>eclipse其实还是蛮难看的，于是进行了一些theme的安装，安装了MoonRise之，选择了Solarized Dark之后遇到了一个问题，就是package explorer的颜色变得非常地不合群了，于是被迫进行了以下的调整。</p>
-<ul>
-<li>Preference - General - Appearance - Colors and Fonts<br>在里面对一些参数进行修改</li>
-</ul>
-<p><img src="https://res.cloudinary.com/shen0334/image/upload/v1587036809/sc_blog2_2_vzawvy.png" alt="The Preference Setting" title="The Preference Setting"></p>
-<p><img src="https://res.cloudinary.com/shen0334/image/upload/v1587036809/sc_blog2_3before_hwq1s6.png" alt="Before" title="Before"></p>
-<p>但是左边的一小条仍然非常难受，其实也是可以设置的</p>
-<ul>
-<li>Range indicator color<br>考验色彩的时候到了，怎么选都和 Solarized 或者sublime 的主题不搭，直到最后选择了黑色才算是合群了一些。 </li>
-</ul>
-<p><img src="https://res.cloudinary.com/shen0334/image/upload/v1587036809/sc_blog2_3after_y5iwh7.png" alt="Before" title="Before"></p>
-<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p>因为在上学期就使用过GitHub，所以在开始的时候没有遇到特别大的困难。最大的困难可能还是在于网速不够快，clone到本地的速度也是问题之一。<br>但是在接下来使用的过程中就会遇到一些乱七八糟的问题<br><em>Add Picture!!!</em></p>
-<ul>
-<li>git commit 忘记 -m “…”了导致直接进入vim编辑<br>解决方法：照常写，然后输入’:wq’保存退出</li>
-<li>git config –usr.email “” 的时候输错了导致自己上传的commit没有出现在contribution里<br>解决方案：</li>
-<li>能否不通过GitHub的接口创建repository，然后直接在git bash中通过git remote add添加仓库并进行上传<br>目前来看：不行，而且在很多论坛上也都表示必须通过github网页接口进行仓库的创建</li>
-</ul>
-<p>这就是前期遇到的一大堆琐碎的问题，很多在遇到的时候非常地错愕与混乱，也花费我一定的时间在网上寻找答案，希望接下来的课程可以不必为这些小问题所困扰。</p>
-
+    <%- post.content %>
   </section>
   <footer class="post-footer">
     <!--
     <section class="author">
-      <h4>Shensl</h4>
-      <p></p>
+      <h4><%- config.author %></h4>
+      <p><%- theme.bio %></p>
     </section>
     -->
   </footer>
 </article>
 
 <nav class="pagination" role="pagination">
-    
-    <a class="newer-posts" href="/2020/03/09/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0Blog01/">
-        prev →<!--软件构造Blog01-->
+    <% if (page.prev) { %>
+    <a class="newer-posts" href="<%- url_for(page.prev.path) %>">
+        ← prev <!--<%- page.prev.title %>-->
     </a>
-    
+    <% } %>
     <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/2020/04/01/%E6%AF%95%E8%AE%BE%E6%97%A5%E5%BF%9701/">
-        <!--毕设日志01--> ← next
+    <% if (page.next) { %>
+    <a class="older-posts" href="<%- url_for(page.next.path) %>">
+        <!--<%- page.next.title %>--> next →
     </a>
-    
+    <% } %>
 </nav>
+<% if (theme.disqus) { -%>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '<%- theme.disqus %>';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<% } -%>
 
 
         </main>
