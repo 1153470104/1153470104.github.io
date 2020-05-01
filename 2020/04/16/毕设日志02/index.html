@@ -1,107 +1,367 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-		
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="">
-        <link rel="shortcut icon" href="/images/Avatar.jpg"/>
-        <link rel="canonical" href="http://guolinn.com/">
-        <link rel="alternate" type="application/rss+xml" title="Shensl" href="">
-        <title>毕设日志02 | ALEX SHEN</title>
-        <meta name="description" content="{{meta_description}}">
 
-        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="ALEX SHEN" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        毕设日志02｜undefined
+        
+    </title>
 
-    <meta name="generator" content="Hexo 4.2.0"></head>
+    <link rel="canonical" href="http://yoursite.com/2020/04/16/毕设日志02/">
+
+    <!-- Bootstrap Core CSS -->
     
-		<body class="post-template">
-	
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
-        <header id="header">
-            <a id="logo" href="/"><img src="/images/Avatar.jpg" alt="ALEX SHEN" /></a>
-            <h1><a href="/">Shensl</a></h1>
-            <p>见树又见林</p>
-            <div id="follow-icons">
-      <a href="http://instagram.com/shensl0334" target="_blank" rel="noopener"><i class="fa fa-instagram fa-2x"></i></a>
-        <a href="http://pinterest.com/wwwsrh" target="_blank" rel="noopener"><i class="fa fa-pinterest-square fa-2x"></i></a>
-        <a href="http://github.com/1153470104" target="_blank" rel="noopener"><i class="fa fa-github-square fa-2x"></i></a>
-          </div>
-<h6><a href="/about">About</a></h6>
-        </header>
 
-        <main id="content">
-        <% permalink = config.url + config.root + post.path %>
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/blog-style.css">
 
-<article class="post">
-  <%= date(post.date, 'MMMM D, YYYY') %>
-  <% if (post.tags && post.tags.length){ %>
-    <span class="taglist">  &middot; 
-    <% count = post.tags.length %>
-    <% post.tags.forEach(function(tag, index) { %>
-      <a href='<%= config.root + tag.path %>'><%= tag.name %></a> 
-    <% }); %>
-    </span>
-  <% } %>
 
-  <h1 class="post-title"><%- post.title %></h1>
-  <section class="post-content article-entry">
-    <%- post.content %>
-  </section>
-  <footer class="post-footer">
-    <!--
-    <section class="author">
-      <h4><%- config.author %></h4>
-      <p><%- theme.bio %></p>
-    </section>
-    -->
-  </footer>
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="/css/syntax.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    ALEX SHEN
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>毕设日志02</h1>
+                    
+                    <span class="meta">
+                         作者 Shensl
+                        <span>
+                          日期 2020-04-16
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            毕设日志02
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <a id="more"></a>
+
+<p>针对景观设计，或者说是建筑设计一块，到底怎么评价，其实因为这个东西很奇怪是没有基本的评价标准的，所以可以人云亦云，所以我在这里有个自己的看法。</p>
+<p>我觉得大致分为3个面向：基础面向、虚伪面向、艺术面向。</p>
+<p>其中基础面向和虚伪面向泾渭分明，艺术面向则是单独脱开出来的东西。</p>
+<h4 id="一、基础面向"><a href="#一、基础面向" class="headerlink" title="一、基础面向"></a>一、基础面向</h4><p>主要是交通流线、无障碍、排水竖向、微气候什么的，属于人在使用场地的时候要注意的最重要的东西。这方面做的好不好。这方面是最主要的东西，就像你胳膊不够粗，但是不能断，如果这方面做的不好，就相当于功能不全，那谈何其他面向。</p>
+<p>但是基础面向很多时候并不是一个可以单独拿出来说的东西，所以很多时候自己觉得自己对一个很重要的问题进行了考虑但是对设计没有什么帮助。形态生成不出来。生成出来之后前面的问题又解决不了了什么的，这些基础面向里还要调整。所以在设计过程中就会有人去强调一种概念。</p>
+<h4 id="二、虚伪面向"><a href="#二、虚伪面向" class="headerlink" title="二、虚伪面向"></a>二、虚伪面向</h4><p>这个面向反而是很多人，或者说的夸张点大部分人绞尽脑汁的地方。想不出一个好的点子就在这里。</p>
+<p>在上软件构造的时候我豁然开朗。什么是表面什么是内核，什么是黑盒什么是白盒。软件构造里对于使用者和开发者之间的关系让我重新认识了这个面向。</p>
+<p>从大一到大五，老师在看我们方案的时候总会问，你有没有概念。怎么怎么样。这是在问我们的内核。是因为在设计的时候总有人进行选择，选择就必须要有依据，相当于一个造神的过程，所以学习的时候总是会觉得扯了这么多是不是在自说自话，自圆其说，本没有路，自己说多了就有了一条路，这是给甲方看的路，这是给自己良心填上的一条路，在满足基本的交通需求之后，其他面向到底有没有那么多作用。</p>
+<p>不得不承认有些面向还是有点用处的，那些面向：听觉、视觉、嗅觉、触觉感官的会引起人体不适的问题，但是有些问题就是纯粹的价值判断问题了，那些关于视觉焦点，文化意义的讨论。我学这个四年了，始终没有什么结论，我要当一个逃兵，我不想也不希望在这个领域耗费我的思考了，我只想做一个欣赏空间的使用者。而使用者根本不需要以上的恶臭。那就是艺术面向了。</p>
+<h4 id="三、艺术面向"><a href="#三、艺术面向" class="headerlink" title="三、艺术面向"></a>三、艺术面向</h4><p>虽然起名字叫艺术面向，但是其实意指使用者以感官感受到的一切，而这个对于使用者来说绝对是一个黑盒，因为你无法知道设计者的过程，就像艺术一样，很多东西都是逻辑思维解释的，都是有因有果的，但是艺术没有，艺术的思维并不一定要特别的逻辑。就跟使用者看出来的一样，纯粹的感受，不去考虑逻辑。如果它给我的感受很好，何苦去追踪它的逻辑呢。</p>
+<p>但是我绝对感官的层面和第一个基本层面有很大的相似程度。因为你在流线合理、行走舒服合理等等之后就会考虑到感官的问题，这个我看着舒不舒服，这些材料我喜不喜欢，不管人的喜好如何，肯定有普世的一个价值能够使得大家都看着舒服。而不是现在我们看到的，各种奇奇怪怪的定制件，诡异的配色和千篇一律的种植。而且很大程度上都是没有什么概念可以声明的，这都是直接办到的，另外的更高层次的就是纯艺术了。</p>
+<p>使用者会考虑你为什么选这个材料吗，选这个材料会帮助吸收大气污染、选这个材料会勾起你对于家乡历史的热爱？开玩笑吧，这都不需要解释。要解释的都是上一个层面。这里的解释只有一个：看着舒服。</p>
+<p>所以总结一下三个面向分别需要什么：</p>
+<p>没病、装逼、审美，大概就是这样了。</p>
+<p>最后再分析一下我为什么当逃兵。我绝对也不是我的锅，也不是我不好好学习。问题就在于太较真了，我太想搞清楚了，但其实不应该搞清楚呢。</p>
+<p>从小的教育带给我的就是把这件事情前因后果想明白就可以了，它确实可以，在知识积累之后你的理解就会变得快速、你会很清楚这件事情的逻辑。但是在遇到设计之后我的世界坍塌了，前两年都在struggle中，因为我从小就没有那个半模糊的思考模式。虽然有的人会说设计还是有清楚逻辑的，但我觉得就是bull shit，要是有清楚逻辑世界上的建筑不得长一样了，当世界上的建筑都长一样之后你把建筑做成屎都是对世界的一大贡献了。现在大家都太把做设计当成是智力活动了，在虚伪面停留了太多时间，虚伪面肯定是要有人去做，但是在真正设计的时候麻烦设计师在一三项多花一点时间。</p>
+<p>因为一三项确实没有那么有演说感，一三项没有那么高端，它得被时时刻刻注意着，但是确实使用者唯一接触到的地方，麻烦设计师们负点责任吧。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/04/01/毕设日志01/" data-toggle="tooltip" data-placement="top"
+                           title="毕设日志01">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、基础面向"><span class="toc-text">一、基础面向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、虚伪面向"><span class="toc-text">二、虚伪面向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、艺术面向"><span class="toc-text">三、艺术面向</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
 </article>
 
-<nav class="pagination" role="pagination">
-    <% if (page.next) { %>
-    <a class="newer-posts" href="<%- url_for(page.next.path) %>">
-        prev →<!--<%- page.next.title %>-->
-    </a>
-    <% } %>
-    <span class="page-number">•</span>
-    <% if (page.prev) { %>
-    <a class="older-posts" href="<%- url_for(page.prev.path) %>">
-        <!--<%- page.prev.title %>--> ← next
-    </a>
-    <% } %>
-</nav>
-<% if (theme.disqus) { -%>
-<div id="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = '<%- theme.disqus %>';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-<% } -%>
 
 
-        </main>
-        <footer id="footer">
-            <section id="footer-message">&copy; 2020 Shensl. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="guolin.github.io" target="_blank">Guo Lin</a>.</section>
-        </footer>
-    </body>
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ALEX SHEN 2020
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/" target="_blank" rel="noopener">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
+</body>
+
 </html>
-
-
