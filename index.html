@@ -43,7 +43,7 @@
 <style>
 
     header.intro-header {
-        background-image: url('')
+        background-image: url('') bottom center
     }
 </style>
 <!-- hack iOS CSS :active style -->
@@ -137,6 +137,8 @@
     .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
         text-align: center;
         background-repeat: no-repeat;
+        /*如果不加 下面的 ‘position center center’ 我做的长图就无法居中显示在缩略里面*/
+        background-position:center center;
         border-radius: 3px;
         background-size: cover;
         padding: 0;
