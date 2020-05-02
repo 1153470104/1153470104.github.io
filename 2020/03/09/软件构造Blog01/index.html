@@ -187,7 +187,7 @@
 <h3 id="实验一"><a href="#实验一" class="headerlink" title="实验一"></a>实验一</h3><p>接下来谈谈对于实验一的体会，几个实验都不是很难，但我都是以非常矫揉造作的形式完成了代码（写完返回来看的时候非常得尴尬）所以接下来谈几个实验里出现的问题。</p>
 <h5 id="MagicSquare"><a href="#MagicSquare" class="headerlink" title="MagicSquare"></a>MagicSquare</h5><p>MagicSquare的要求是编写一个可以读入文件并进行检测的函数，对于我这样的java新手来说，难点其实是如何读入文件，还有应用Java的错误处理机制。这些的话通过Google、CSDN很方便地搞定了。<br>实现很简单，但是测试通过回过头去居然发现我存储读入数据的数据结构居然是一维数组。在开始的时候居然没用想到可以利用二维数据直截了当地存储一个Square。</p>
 <h5 id="Turtle"><a href="#Turtle" class="headerlink" title="Turtle"></a>Turtle</h5><p>Turtle没有很难，（毕竟MIT把实现过程嚼碎了喂给你）就是看英语比较花时间。感觉如果母语是英语或者是较为接近的拉丁字母语言，单单编程的学习曲线会比较平缓吧。在建筑学院的时候曾经用一个软件叫做天正，它的快捷键居然是拼音对应的操作，比如：倒墙角/DQJ，对中国人非常友好。</p>
-<p>但是在其中还是遇到了问题，在导入之后的Package管理方面出现了问题，因为有本来就存在的工程文件，所以在eclipse里我的操作似乎都会出现各种各样的问题。最终我把所有的类分出来重新创建了一个project才解决了这个问题。如果持续遇到这个问题，可以就它写写总结。</p>
+<p>但是在其中还是遇到了问题，在导入之后的Package管理方面出现了问题，因为有本来就存在的工程文件，所以在eclipse里我的操作似乎都会出现各种各样的问题。最终我把所有的类分出来重新创建了一个project才解决了这个问题。如果持续遇到这个问题，可以就它写一个总结。</p>
 <h5 id="FriendshGraph"><a href="#FriendshGraph" class="headerlink" title="FriendshGraph"></a>FriendshGraph</h5><p>实现也不是很难，这个图采用了邻接表的方式进行实现。但是回国头来我发现还是比较Naive的。因为不想多创建一个EdegeNode文件，我选择了为每条edge new新的person节点，然后用person节点中指向的下一个person来进行这个person vertex的人际关系的表示。比较粗糙而且不符合逻辑。这都是因为我没有想到还可以用Nest Class，明明知道这个概念但是没用运用起来真是非常不应该的。</p>
 <h3 id="其他感受"><a href="#其他感受" class="headerlink" title="其他感受"></a>其他感受</h3><ul>
 <li><p>虽然搞定了文件输入，但是其实我只是看别人用了一个方法我也这么用一下。真正熟悉还是要等到有需求之后的大量练习。</p>
