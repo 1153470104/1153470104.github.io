@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        reading:程序员的线性代数｜Alex Shen&#39;s blog
+        reading：程序员的数学概率统计｜Alex Shen&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://1153470104.github.io/2020/08/23/reading：程序员的线性代数/">
+    <link rel="canonical" href="https://1153470104.github.io/2020/09/19/reading：程序员的数学概率统计/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -153,13 +153,13 @@
 
 
 <img class="wechat-title-img"
-     src="nullhttps://res.cloudinary.com/shen0334/image/upload/v1598495304/reading2_linear_algebra_wkbhuo.jpg">
+     src="https://res.cloudinary.com/shen0334/image/upload/v1588513979/PC101130_%E7%9C%8B%E5%9B%BE%E7%8E%8B_rjs2bi.jpg#博文默认的图片">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1598495304/reading2_linear_algebra_wkbhuo.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1588513979/PC101130_%E7%9C%8B%E5%9B%BE%E7%8E%8B_rjs2bi.jpg#博文默认的图片')
     }
 
     
@@ -170,18 +170,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>reading:程序员的线性代数</h1>
+                    <h1>reading：程序员的数学概率统计</h1>
                     
                     <span class="meta">
                          作者 Alex Shen
                         <span>
-                          日期 2020-08-23
+                          日期 2020-09-19
                          </span>
                     </span>
                     <div class="tags text-center">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
                         
                     </div>
                 </div>
@@ -190,7 +187,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            reading:程序员的线性代数
+            reading：程序员的数学概率统计
         </span>
     </div>
 </header>
@@ -201,57 +198,42 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="读书笔记：程序员的线性代数"><a href="#读书笔记：程序员的线性代数" class="headerlink" title="读书笔记：程序员的线性代数"></a>读书笔记：程序员的线性代数</h2><p>看这本书的原因和上一本微积分相同，因为对线代非常生疏了。就看一下这本很多人给新手推荐的线性代数入门书籍，讲的也确实通俗易懂。</p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>本书面向非数学专业，作者自己强调这是一本描述如何使用线性代数、在哪里用的书籍。所以本书围绕着几大问题展开，读起来非常顺畅，即：<strong>如何解线性方程组</strong>、<strong>矩阵稳定性的判断</strong>、<strong>如何求解特征值特征向量</strong>。一些概念都从这几个问题展开来提出，我感觉是便于我理解整本书的内容，以及记忆线性代数的知识点的。</p>
-<h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h3><ul>
-<li><p>第一章：基础知识</p>
-<p>先介绍一些基本概念，基底、维数、坐标</p>
-<p>随后介绍了矩阵即映射的结论、介绍各类矩阵、展示了如何用矩阵来表达各类关系</p>
-<p>然后介绍行列式，解释行列式等同于扩大率，然后讲解行列式计算方法。</p>
-</li>
-<li><p>第二章：线性方程组计算和良性恶性矩阵</p>
-<p>先定义良性矩阵、恶性矩阵</p>
-<p>良性线性方程组解法：消去法、Gauss-Jordan法，介绍逆矩阵的求解法，最后说明一下初等变换。</p>
-<p>解释恶性问题，提出kernel核、image祥概念、秩rank和维数定理</p>
-<p>良性和恶性的判断、可逆性的等价条件介绍，然后有一些恶性问题例子</p>
-</li>
-<li><p>第三章：数值计算（LU分解）</p>
-<p>引出LU分解</p>
-<p>怎么LU分解，怎么用它求行列式、求解线性方程组、求逆矩阵</p>
-<p>最后讨论意外情况</p>
-</li>
-<li><p>第四章：失控性</p>
-<p>提出稳定性的问题</p>
-<p>考虑可对角化情况，从变量替换、坐标变换、乘方考虑</p>
-<p>提出特征值、特征向量，以及计算方法</p>
-<p>介绍了一个连续时间系统的例子</p>
-<p>考虑不可对角化的情况，介绍jordan标准型</p>
-<p>jordan标准型的用法，以及划归为jordan标准型的方法，最后证明所有方阵均可Jordan标准型。</p>
-</li>
-<li><p>第五章：特征值计算法</p>
-<p>介绍伽罗华理论，5X5以上矩阵无通用解</p>
-<p>介绍jacobi方法，其中的平面旋转以及优化方法</p>
-<p>先提出幂法、QR分解</p>
-<p>再介绍QR方法、Hessenberg矩阵、Householder方法和海森伯格矩阵的QR迭代，一些技巧和反幂法</p>
-</li>
+                <h2 id="读书笔记：程序员的数学-概率统计"><a href="#读书笔记：程序员的数学-概率统计" class="headerlink" title="读书笔记：程序员的数学 概率统计"></a>读书笔记：程序员的数学 概率统计</h2><p>之前读过程序员的数学、程序员的数学线性代数，这次就把程序员的数学：概率统计也看了。配上普林斯顿微积分读本，算是把高数三件套都过了一遍。虽然说也上过一遍概率论，但又只剩下一些零碎的记忆了。这次看一遍这本概率统计，看看能不能捞回来一点。</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>跟本科上课的教材相比，它的特点和之前写过的这种数学入门书都非常像，就是干货少讲解多。非常适合初学者用来理解概率统计相关的知识结构。</p>
+<p>这边举一个英语的例子：高中的时候英语很差，听的时候总害怕听不懂。后来英语渐渐好了点，也发现了，我听中文也有很多时候听不懂。想通之后，回头再听英文虽然还是听不懂，但踏实了很多。看这种教材，诸如概率论与数理统计，给我的感觉就是很害怕，但是看完《程序员的数学：概率统计》之后对于概率的各类分布有了概念，以及概率的体积泛化是怎么回事之后看起教材来即便是不熟悉的内容，也能自信了许多。</p>
+<p>本书也主要围绕几个重点展开：多元随机变量、离散值概率分布、连续值概率分布、协方差矩阵、估计检验、伪随机数以及一些应用。可能是因为每种都涉猎但是没有深入吧，这一本400页轻度编排的书籍感觉讲了比400页A4教材更多的东西。尤其是在协方差矩阵的地方，利用椭圆清晰地解释了PCA的原理，去年在上机器学习时挣扎痛苦还无法理解，原来只要有这个知识背景就能快速了解。</p>
+<h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>下面是一些问题</p>
+<h4 id="一二章-概率定义-多随机变量"><a href="#一二章-概率定义-多随机变量" class="headerlink" title="一二章 概率定义 多随机变量"></a>一二章 概率定义 多随机变量</h4><ul>
+<li>什么是三元组$(\Omega,F, P)$，以及他们代表了什么含义，有什么特性</li>
+<li>上帝视角与人类视角的区别和联系</li>
+<li>概率分布与随机变量的区别</li>
+<li>联合概率与边缘概率是什么，多变量的边缘概率是怎么样的</li>
+<li>条件概率与贝叶斯分布是怎么样的</li>
+<li>$\Sigma_bP(X=a|Y=b)=1$  是正确的吗？</li>
+<li>事件独立性的表述，五种</li>
+<li>独立性与 均匀分布、（独立）同分布、互斥 之间的关系</li>
+<li>如何由 $X,Y,Z$  间独立，推出两两之间独立；</li>
+<li>两两独立能够推出整体独立吗，整体独立需要怎样的条件，几个条件？</li>
 </ul>
-<h3 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h3><p>和普林斯顿微积分一样，这本书不是一本数学教材，感觉更像是一本保姆级的线代指南。很适合初学者以及忘得差不多的人学习。没有多少例题，看起来非常快。用来温习一遍或者梳理线代基础知识点非常不错。</p>
-<h3 id="附：书内具体理论"><a href="#附：书内具体理论" class="headerlink" title="附：书内具体理论"></a>附：书内具体理论</h3><p>TODO</p>
-
+<h4 id="第三章-离散分布"><a href="#第三章-离散分布" class="headerlink" title="第三章   离散分布"></a>第三章   离散分布</h4><ul>
+<li>二项分布是什么，列出最普遍的二项分布</li>
+<li>标准差代表了什么，什么是概率分布的标准化，如何进行标准化</li>
+<li>各项独立时，和的方差与方差的和的关系，如何证明</li>
+<li>$V[X] = E[X^2]-E[x]^2$ 如何证明</li>
+<li>系统误差 与 随机误差 与 期望 和 方差 的关系。</li>
+<li>平均值的期望值 是 如何反映大数定律的</li>
+<li>如何用最小二乘法估计使得在$P(Y=b|X=a)$ 下输入X输出Y的估计值，估计值的误差期望值最小</li>
+</ul>
+<h4 id="第四章-连续分布"><a href="#第四章-连续分布" class="headerlink" title="第四章 连续分布"></a>第四章 连续分布</h4>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2020/09/07/reading：Linux-C编程一站式学习/" data-toggle="tooltip" data-placement="top"
-                           title="reading：Linux_C编程一站式学习">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2020/08/16/reading：普林斯顿微积分读本/" data-toggle="tooltip" data-placement="top"
-                           title="reading：普林斯顿微积分读本">Next Post &rarr;</a>
+                        <a href="/2020/09/07/课程missing_semester/" data-toggle="tooltip" data-placement="top"
+                           title="course missing semester">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -270,7 +252,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：程序员的线性代数"><span class="toc-text">读书笔记：程序员的线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要内容"><span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#体会"><span class="toc-text">体会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附：书内具体理论"><span class="toc-text">附：书内具体理论</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：程序员的数学-概率统计"><span class="toc-text">读书笔记：程序员的数学 概率统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内容"><span class="toc-text">内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一二章-概率定义-多随机变量"><span class="toc-text">一二章 概率定义 多随机变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三章-离散分布"><span class="toc-text">第三章   离散分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四章-连续分布"><span class="toc-text">第四章 连续分布</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -291,9 +273,6 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
                         
                     </div>
                 </section>
