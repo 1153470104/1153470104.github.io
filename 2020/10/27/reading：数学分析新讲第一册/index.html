@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165411529-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165411529-1');
+</script>
+
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="沈孙乐在 Github 上的个人博客">
+    <meta name="keyword" content="见树又见林">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="Alex Shen" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        reading：数学分析新讲第一册｜Alex Shen&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://1153470104.github.io/2020/10/27/reading：数学分析新讲第一册/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="/css/syntax.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('') bottom center
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Alex Shen
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="nullhttps://res.cloudinary.com/shen0334/image/upload/v1603796808/reading6_new_math_analysis_band_dxhs7d.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1603796808/reading6_new_math_analysis_band_dxhs7d.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>reading：数学分析新讲第一册</h1>
+                    
+                    <h2 class="subheading">沉潜书中，听大师教诲</h2>
+                    
+                    <span class="meta">
+                         作者 Alex Shen
+                        <span>
+                          日期 2020-10-27
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#CS"
+                           title="CS">CS</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            reading：数学分析新讲第一册
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="读书笔记：数学分析新讲第一册"><a href="#读书笔记：数学分析新讲第一册" class="headerlink" title="读书笔记：数学分析新讲第一册"></a>读书笔记：数学分析新讲第一册</h2><p>最近在阅读张筑生老师的数学分析新讲，这本书本来就是看到很多人推荐的，正好我想好好巩固一下数学分析，所以从第一册开始啃。现在读毕首册，偶然了解了张筑生老师的生平故事，颇为感动。只感觉有幸能够阅读到老师的书籍，作为一个后世的学子在书中聆听大师的教诲。这里顺便附一下豆瓣上转载的王恳纪念张筑生写的文章，不过原出处暂时找不到 <a href="https://book.douban.com/review/9021519/" target="_blank" rel="noopener">https://book.douban.com/review/9021519/</a></p>
+<p>本书有三册，内容上还算有一定分界，再加上全部一次性读完不是我水平所能做到的，所以书的小结各册读完分开撰写。</p>
+<h3 id="主要内容-amp-特点"><a href="#主要内容-amp-特点" class="headerlink" title="主要内容&amp;特点"></a>主要内容&amp;特点</h3><p>第一册主要由基础知识和一元微积分相关内容组成，其中第一篇关于实数、极限和连续函数的讨论花费了三章150页，确实是一本数学分析书籍，非常重视分析的基础。第二篇中，开始提到我们最熟悉的求导、积分内容，最后还初步讨论了微分方程。书本没有练习的题目，只有对于所介绍的原理十分应景的例题，然后就会踏入一些典型的应用领域，比如微分方程部分的开普勒行星运动定律等等。</p>
+<p>因为有一定微积分知识，所以读的时候会觉得后半篇没有那么艰深，甚至会觉得蛮轻松。感觉书的特点在于第一篇的分析基础，讲的非常详尽，从连续性、确界理论开始到序列、极限、收敛描述都非常清晰，并在微积分概念提出前就用朴素的方式证明了一些初等函数的极限问题。再往下铺陈导数、不定积分、定积分的概念也顺理成章。最后书中讲微分方程时直接引出了欧拉公式，然后以开普勒和万有引力的互推结束，甚至感觉有点震撼，感觉这个世界都可以通过几个微分方程联系起来。</p>
+<h3 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h3><p>虽然阅读时会有一些小小困难，但是还是感受到了前所未有的易读和清晰，有些时候思想跳脱了、发现自己看不懂了也一点不担心。因为在我前后翻看、重读概念之后，原本看不懂的推导又能轻松理解。有学生回忆张筑生老师时会说：他的讲授是如此清晰，让资质平庸的自己都能理解。而这本数学分析新讲，至少是第一册，也能让我这样的门外汉能够理解诸多原理的要义。</p>
+<p>不过单单一本书不可能是全能的，如果要针对做题来说这本书并没有什么训练的题目，如果有考试的需要肯定得另找书籍。如果跟我一样只是想巩固一下数分的知识，这本书非常适合。</p>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><p>以下是我阅读时进行的要点和问题梳理，如有谬误，敬请读者指教：</p>
+<h4 id="预备知识-amp-第一章-实数"><a href="#预备知识-amp-第一章-实数" class="headerlink" title="预备知识 &amp; 第一章 实数"></a>预备知识 &amp; 第一章 实数</h4><ul>
+<li>Heviside 海维赛德函数和 Direchlet 狄里克莱函数是什么</li>
+<li>哑指标是什么</li>
+</ul>
+<p>实数</p>
+<ul>
+<li>规范小数的定义是什么，实数的三歧性是什么</li>
+<li>上下确界 $inf E, supE$ 是如何定义的（两点）</li>
+<li>如何证明确界定理 情形1 / 情形2</li>
+<li>有序域是什么, 实数域 / 有理数域 / 复数域 是有序域吗</li>
+</ul>
+<p>不等式</p>
+<ul>
+<li><p>绝对值不等式有哪些，如何推导</p>
+</li>
+<li><p>Bernoulli 伯努利不等式是什么, 如何证明</p>
+</li>
+<li>几何平均数不等式是什么, 如何证明</li>
+<li>如何证明 $sin(x)&lt;x&lt;tan(x)$ 不等式</li>
+</ul>
+<h4 id="第二章-极限"><a href="#第二章-极限" class="headerlink" title="第二章 极限"></a>第二章 极限</h4><p>无穷小序列和极限</p>
+<ul>
+<li>上下界和无穷小序列是什么</li>
+<li><p>无穷小序列的和、乘积、$n^k/b^n$、$c^n/n! 、无穷小序列的算术平均数、几何平均数 是否为无穷小序列，如何证明</p>
+</li>
+<li><p>一个序列能否有两个极限，如何证明</p>
+</li>
+<li>夹逼定理是什么，如何证明 $lim\sqrt[n]{a_1a_2a_3…a_n}=A$ </li>
+<li>各类极限的 和差、成绩、乘积、倒数 的结果是什么，如何利用无穷小序列证明</li>
+<li>如何证明收敛序列有界</li>
+</ul>
+<p>收敛原理</p>
+<ul>
+<li>单调收敛原理是什么，如何通过迭代近似得到算术平方根</li>
+<li>闭区间套原理是什么，如何证明</li>
+<li>Bolzano-Weierstrass 波尔查诺-维尔斯特拉斯定理是什么，如何证明</li>
+<li>柯西收敛原理是什么，如何用于判断序列收敛/不收敛</li>
+</ul>
+<p>无穷大</p>
+<ul>
+<li>实数系与扩充的实数系是什么</li>
+<li>Toeplitz数表、 Stolz 斯笃兹定理是什么</li>
+</ul>
+<p>函数极限</p>
+<ul>
+<li>邻域是什么，怎么定义</li>
+<li>函数极限的序列式定义和 $\epsilon-\eta$ 定义分别是什么</li>
+<li>单侧极限和双侧极限的关系讨论</li>
+</ul>
+<h4 id="第三章-连续函数"><a href="#第三章-连续函数" class="headerlink" title="第三章 连续函数"></a>第三章 连续函数</h4><ul>
+<li>函数连续的定义是什么</li>
+<li>介值定理是什么，如何用闭区间套原理证明，不动点是什么</li>
+<li>闭区间上连续就有界，如何证明，在开区间上成立吗</li>
+<li>一致连续是什么，什么样的有界连续区间是一直连续的？</li>
+<li>如何衡量不同无穷量的大小，$O, o, $ ~ 的区别</li>
+<li>几个公式 $\lim<em>{x\rightarrow 0}(1+1/x)^x, lim</em>{a\rightarrow0}\frac{e^\alpha-1}{\alpha}, lim_{\beta\rightarrow0}\frac{\beta}{ln(1+\beta)} =1$</li>
+<li>$lim<em>{a\rightarrow0}\frac{b^\alpha-1}{\alpha}=ln(b), lim</em>{a\rightarrow0}\frac{(1+\alpha)^\mu-1}{\alpha}=\mu$ </li>
+<li>$sin(x), cos(x), e^x, ln(1+x), (1+x)^\mu$ 这些的近似极限是什么，并证明</li>
+</ul>
+<h4 id="第四章-导数"><a href="#第四章-导数" class="headerlink" title="第四章 导数"></a>第四章 导数</h4><p>导数</p>
+<ul>
+<li>导数的概念, 如何用增量方式来解释, 如何用莱布尼兹记号 / 拉格朗日记号来表示 </li>
+<li>抛物线/旋转抛物面的光学性质是什么</li>
+<li>可微性是什么, 微分定义是什么</li>
+</ul>
+<p>求导</p>
+<ul>
+<li>推导 $f(x)=u(x)v(x) g(x)=u(x)/v(x)$ 的倒数</li>
+<li>罗列 $ch\space x=\frac{e^x+e^{-x}}{2},ch\space x=\frac{e^x-e^{-x}}{2}$ 双曲余弦与双曲正弦的各类性质 类似三角函数,包括导数</li>
+<li>如何求解 $(u(x)^{v(x)})’$</li>
+<li>反函数的求导法则, 以及如何用于解释 $ln(x), e^x$ 互为反函数</li>
+<li>求 $arc\space sin(y), arc\space cos(y), arc\space tan(y)$ 的导数,利用反函数求导法则</li>
+<li>参数式的求导公式, 如何推导</li>
+<li>极坐标切线 - 极径的夹角的关系, 他们的正切是多少,并推导</li>
+<li>隐函数求导的好处,如何用对数求导法,利用隐函数求导得到 $y=u(x)^{v(x)}$ 的导数</li>
+<li>高阶<em>乘积</em> 导数的Leibnitz公式是什么,如何证明</li>
+<li>参数式的二阶求导结果,如何推导</li>
+<li>什么是无穷小增量公式 / Fermat 费马定理 </li>
+<li>临界点是什么, 临界点与极值的关系</li>
+<li>罗尔Rolle定理 拉格朗日定理 $f(x)=f(x_0)+f’(\xi)(x-x_0)$ 三者内容是什么, 是什么公式</li>
+<li>极值的第一第二充分条件是什么</li>
+<li>光学的费马定理如何利用极值定理进行证明和求解</li>
+</ul>
+<h4 id="第五章-原函数与不定积分"><a href="#第五章-原函数与不定积分" class="headerlink" title="第五章 原函数与不定积分"></a>第五章 原函数与不定积分</h4><p>普通积分</p>
+<ul>
+<li>原函数的定义是什么</li>
+<li>$\int\frac{dx}{cos^2x},\int\frac{dx}{1+x^2},\int\frac{dx}{\sqrt{1-x^2}}$ , 的不定积分是什么</li>
+<li>换元积分法有哪两种</li>
+<li>分部积分法是什么</li>
+</ul>
+<p>有理函数积分</p>
+<ul>
+<li>什么是既约真分式</li>
+<li>既约真分式有哪两种分解方式?</li>
+<li>$R(sin\space x,cos\space x)dx,R(x,\sqrt{ax^2+bx+c})dx,R(x,\sqrt[n]{\frac{ax+\beta}{\gamma x+\delta}})dx, x^{\lambda}(a+bx^\mu)dx$, 如何通过有理化进行</li>
+</ul>
+<h4 id="第六章-定积分"><a href="#第六章-定积分" class="headerlink" title="第六章 定积分"></a>第六章 定积分</h4><ul>
+<li>黎曼积分的概念是什么，以及如何使用 $\epsilon - \delta$ 方式重述该定义</li>
+<li>如何证明积分的可加性，利用黎曼积分的概念</li>
+<li>积分的中值定理是什么</li>
+<li>牛顿 - 莱布尼兹公式是什么</li>
+<li>定积分的微元是什么，定积分微元法的四个步骤是什么</li>
+<li>曲线弧长的公式是什么，如何推导证明、旋转曲面的面积如何推导、以及运用的不等式的差异</li>
+</ul>
+<h4 id="第七章-微分方程初步"><a href="#第七章-微分方程初步" class="headerlink" title="第七章 微分方程初步"></a>第七章 微分方程初步</h4><ul>
+<li>一阶线性微分方程：$\frac{dx}{dt}+ax=0,\frac{dx}{dt}+ax=b(t)$ 如何求解</li>
+<li>变量分离型微分方程：<script type="math/tex">\frac{dx}{dt}=a(t)x,\frac{dx}{dt}=f(t)g(x),\frac{dx}{dt}=f(\frac{x}{t}),\frac{dx}{dt}=\frac{\alpha x+\beta t}{\gamma x+\delta t},\frac{dx}{dt}=\frac{\alpha x+\beta t+\lambda}{\gamma x+\delta t+\mu}</script> 几类式子如何进行变量分离</li>
+<li>复数的除法，Cauchy不等式是什么</li>
+<li>欧拉公式是什么，如何证明</li>
+<li>非齐次线性微分方程与齐次线性微分方程解的关系</li>
+<li>如何通过引入算子多项式和特征多项式求解二阶常系数线性微分方程，如何理解算子</li>
+<li>如何求解一般n阶常系数线性微分方程</li>
+<li>应用：弹性振动运动方程推演、开普勒行星运动定律与万有引力定律的互推</li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2020/10/27/reading：现代设计的先驱者/" data-toggle="tooltip" data-placement="top"
+                           title="reading：现代设计的先驱者">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/09/25/reading：Linux-C一站式编程-C语言部分/" data-toggle="tooltip" data-placement="top"
+                           title="reading：Linux_C一站式编程_C语言部分">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：数学分析新讲第一册"><span class="toc-text">读书笔记：数学分析新讲第一册</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要内容-amp-特点"><span class="toc-text">主要内容&amp;特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#体会"><span class="toc-text">体会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附录"><span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#预备知识-amp-第一章-实数"><span class="toc-text">预备知识 &amp; 第一章 实数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二章-极限"><span class="toc-text">第二章 极限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三章-连续函数"><span class="toc-text">第三章 连续函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四章-导数"><span class="toc-text">第四章 导数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五章-原函数与不定积分"><span class="toc-text">第五章 原函数与不定积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第六章-定积分"><span class="toc-text">第六章 定积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第七章-微分方程初步"><span class="toc-text">第七章 微分方程初步</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#CS"
+                           title="CS">CS</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/qi-zhi-zou-nuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/沈孫樂">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/1153470104">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Alex Shen 2020
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/" target="_blank" rel="noopener">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://1153470104.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-165411529-1';
+    var _gaDomain = 'auto';
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg">
+</body>
+
+</html>
