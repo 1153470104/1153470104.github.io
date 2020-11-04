@@ -182,8 +182,11 @@
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#CS"
-                           title="CS">CS</a>
+                        <a class="tag" href="/tags/#reading"
+                           title="reading">reading</a>
+                        
+                        <a class="tag" href="/tags/#math"
+                           title="math">math</a>
                         
                     </div>
                 </div>
@@ -233,7 +236,7 @@
 <h4 id="第二章-极限"><a href="#第二章-极限" class="headerlink" title="第二章 极限"></a>第二章 极限</h4><p>无穷小序列和极限</p>
 <ul>
 <li>上下界和无穷小序列是什么</li>
-<li><p>无穷小序列的和、乘积、$n^k/b^n$、$c^n/n! 、无穷小序列的算术平均数、几何平均数 是否为无穷小序列，如何证明</p>
+<li><p>无穷小序列的和、乘积、$n^k/b^n$、$c^n/n!$ 、无穷小序列的算术平均数、几何平均数 是否为无穷小序列，如何证明</p>
 </li>
 <li><p>一个序列能否有两个极限，如何证明</p>
 </li>
@@ -265,8 +268,8 @@
 <li>闭区间上连续就有界，如何证明，在开区间上成立吗</li>
 <li>一致连续是什么，什么样的有界连续区间是一直连续的？</li>
 <li>如何衡量不同无穷量的大小，$O, o, $ ~ 的区别</li>
-<li>几个公式 $\lim<em>{x\rightarrow 0}(1+1/x)^x, lim</em>{a\rightarrow0}\frac{e^\alpha-1}{\alpha}, lim_{\beta\rightarrow0}\frac{\beta}{ln(1+\beta)} =1$</li>
-<li>$lim<em>{a\rightarrow0}\frac{b^\alpha-1}{\alpha}=ln(b), lim</em>{a\rightarrow0}\frac{(1+\alpha)^\mu-1}{\alpha}=\mu$ </li>
+<li>几个公式 $lim_{x\rightarrow 0}(1+1/x)^x, lim_{a\rightarrow0}\frac{e^\alpha-1}{\alpha}, lim_{\beta\rightarrow0}\frac{\beta}{ln(1+\beta)}=1$</li>
+<li>$lim_{a\rightarrow0}\frac{b^\alpha-1}{\alpha}=ln(b), lim_{a\rightarrow0}\frac{(1+\alpha)^\mu-1}{\alpha}=\mu$ </li>
 <li>$sin(x), cos(x), e^x, ln(1+x), (1+x)^\mu$ 这些的近似极限是什么，并证明</li>
 </ul>
 <h4 id="第四章-导数"><a href="#第四章-导数" class="headerlink" title="第四章 导数"></a>第四章 导数</h4><p>导数</p>
@@ -379,8 +382,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#CS"
-                           title="CS">CS</a>
+                        <a class="tag" href="/tags/#reading"
+                           title="reading">reading</a>
+                        
+                        <a class="tag" href="/tags/#math"
+                           title="math">math</a>
                         
                     </div>
                 </section>
@@ -510,6 +516,35 @@
     })
 </script>
 
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    }});
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 <!-- Google Analytics -->

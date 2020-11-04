@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        reading：程序员的数学概率统计｜Alex Shen&#39;s blog
+        阶段总结20.10｜Alex Shen&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://1153470104.github.io/2020/09/19/reading：程序员的数学概率统计/">
+    <link rel="canonical" href="https://1153470104.github.io/2020/10/28/阶段总结20-10/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -153,13 +153,13 @@
 
 
 <img class="wechat-title-img"
-     src="nullhttps://res.cloudinary.com/shen0334/image/upload/v1600785027/reading3_probability_statistic_dwjh4h.jpg">
+     src="https://res.cloudinary.com/shen0334/image/upload/v1588513979/PC101130_%E7%9C%8B%E5%9B%BE%E7%8E%8B_rjs2bi.jpg#博文默认的图片">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1600785027/reading3_probability_statistic_dwjh4h.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1588513979/PC101130_%E7%9C%8B%E5%9B%BE%E7%8E%8B_rjs2bi.jpg#博文默认的图片')
     }
 
     
@@ -170,20 +170,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>reading：程序员的数学概率统计</h1>
-                    
-                    <h2 class="subheading">大学数学三件套最后一部</h2>
+                    <h1>阶段总结20.10</h1>
                     
                     <span class="meta">
                          作者 Alex Shen
                         <span>
-                          日期 2020-09-19
+                          日期 2020-10-28
                          </span>
                     </span>
                     <div class="tags text-center">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
                         
                     </div>
                 </div>
@@ -192,7 +187,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            reading：程序员的数学概率统计
+            阶段总结20.10
         </span>
     </div>
 </header>
@@ -203,77 +198,19 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <a id="more"></a>
-<h2 id="读书笔记：程序员的数学-概率统计"><a href="#读书笔记：程序员的数学-概率统计" class="headerlink" title="读书笔记：程序员的数学 概率统计"></a>读书笔记：程序员的数学 概率统计</h2><p>之前读过程序员的数学、程序员的数学线性代数，这次就把程序员的数学：概率统计也看了。配上普林斯顿微积分读本，算是把高数三件套都过了一遍。虽然说也上过一遍概率论，但又只剩下一些零碎的记忆了。这次看一遍这本概率统计，看看能不能捞回来一点。</p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>跟本科上课的教材相比，它的特点和之前写过的这种数学入门书都非常像，就是干货少讲解多。非常适合初学者用来理解概率统计相关的知识结构。</p>
-<p>这边举一个英语的例子：高中的时候英语很差，听的时候总害怕听不懂。后来英语渐渐好了点，也发现了，我听中文也有很多时候听不懂。想通之后，回头再听英文虽然还是听不懂，但踏实了很多。看这种教材，诸如概率论与数理统计，给我的感觉就是很害怕，但是看完《程序员的数学：概率统计》之后对于概率的各类分布有了概念，以及概率的体积泛化是怎么回事之后看起教材来即便是不熟悉的内容，也能自信了许多。</p>
-<p>本书也主要围绕几个重点展开：多元随机变量、离散值概率分布、连续值概率分布、协方差矩阵、估计检验、伪随机数以及一些应用。可能是因为每种都涉猎但是没有深入吧，这一本400页轻度编排的书籍感觉讲了比400页A4教材更多的东西。尤其是在协方差矩阵的地方，利用椭圆清晰地解释了PCA的原理，去年在上机器学习时挣扎痛苦还无法理解，原来只要有这个知识背景就能快速了解。</p>
-<h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>下面是看这本书的时候随手记的一些问题，我自己复习的时候用来回忆知识点用。</p>
-<h4 id="第一、二章-概率定义-多随机变量"><a href="#第一、二章-概率定义-多随机变量" class="headerlink" title="第一、二章 概率定义 多随机变量"></a>第一、二章 概率定义 多随机变量</h4><ul>
-<li>什么是三元组$(\Omega,F, P)$，以及他们代表了什么含义，有什么特性</li>
-<li>上帝视角与人类视角的区别和联系</li>
-<li>概率分布与随机变量的区别</li>
-<li>联合概率与边缘概率是什么，多变量的边缘概率是怎么样的</li>
-<li>条件概率与贝叶斯分布是怎么样的</li>
-<li>$\Sigma_bP(X=a|Y=b)=1$  是正确的吗？</li>
-<li>事件独立性的表述，五种</li>
-<li>独立性与 均匀分布、（独立）同分布、互斥 之间的关系</li>
-<li>如何由 $X,Y,Z$  间独立，推出两两之间独立；</li>
-<li>两两独立能够推出整体独立吗，整体独立需要怎样的条件，几个条件？</li>
-</ul>
-<h4 id="第三、四章-离散、连续分布"><a href="#第三、四章-离散、连续分布" class="headerlink" title="第三、四章   离散、连续分布"></a>第三、四章   离散、连续分布</h4><ul>
-<li>二项分布是什么，列出最普遍的二项分布</li>
-<li>标准差代表了什么，什么是概率分布的标准化，如何进行标准化</li>
-<li>各项独立时，和的方差与方差的和的关系，如何证明</li>
-<li>$V[X] = E[X^2]-E[x]^2$ 的证明</li>
-<li>系统误差 与 随机误差 与 期望 和 方差 的关系。</li>
-<li>平均值的期望值 是 如何反映大数定律的</li>
-<li>如何用最小二乘法估计使得在$P(Y=b|X=a)$ 下输入 X 输出 Y 的估计值，估计值的误差期望值最小</li>
-<li>拉伸变换、线性变换后的概率密度函数如何变化，非线性变换后又如何变化</li>
-<li>中心极限定理是什么，与大数定理的关系</li>
-</ul>
-<h4 id="第五章-协方差矩阵与多元正态分布"><a href="#第五章-协方差矩阵与多元正态分布" class="headerlink" title="第五章 协方差矩阵与多元正态分布"></a>第五章 协方差矩阵与多元正态分布</h4><ul>
-<li>协方差与相关系数的关系，协方差的运算</li>
-<li>协方差反应变量关系的局限性有哪些</li>
-<li>如何理解多元标准正态分布的概率密度函数 <script type="math/tex">f_Z(Z)=d\space exp(-1/2||Z||^2)</script></li>
-<li>多元正态分布如何通过对函数操作来进行 位移、旋转变换、按轴缩放</li>
-<li>多元正态分布空间意义上的投影和截面有何区别，如何对应条件分布与边缘分布</li>
-<li>作为单位阵、对角阵与一般矩阵的协方差矩阵 与 椭圆的关系</li>
-</ul>
-<h4 id="第六、七章-估计与检验-伪随机数"><a href="#第六、七章-估计与检验-伪随机数" class="headerlink" title="第六、七章 估计与检验 伪随机数"></a>第六、七章 估计与检验 伪随机数</h4><ul>
-<li>描述统计与期望统计的区别</li>
-<li>最小方差估计、最大似然估计和贝叶斯估计的内容和区别</li>
-<li>检验理论的 false reject 和 false accept是什么</li>
-<li>蒙特卡洛方法是什么，低差异序列和伪随机数序列哪个更好</li>
-<li>抛硬币是否能用伪随机数的奇偶来区别，骰子模拟能否用按6取模来区别？</li>
-<li>如何通过累计分布函数、概率密度函数来生成连续随机数</li>
-<li>有哪些生成正态分布随机数的方法</li>
-<li>生成三角和球面上随机数的方法</li>
-</ul>
-<h4 id="第八章-各类应用"><a href="#第八章-各类应用" class="headerlink" title="第八章 各类应用"></a>第八章 各类应用</h4><ul>
-<li>最小二乘法如何从几何学进行解释</li>
-<li>主成分分析中的原始数据 $x$ 与压缩数据 $z$ 和主成分 $y$ 的关系</li>
-<li>卡尔曼滤波器的特点和形式</li>
-<li>马尔可夫链：什么是转移概率矩阵，极限分布与吸收概率是什么</li>
-<li>联合熵、条件熵、互信息之间的关系，它们如何与条件概率相关联</li>
-<li>信源编码的压缩成功率和信道容量是什么</li>
-</ul>
-<h3 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h3><p>本书在讲解概率相关的基础知识的时候非常详尽，至少能把你的概率论知识结构性地捞回来一点。同时又应景地介绍了一些应用，虽然不是很深入，但是对你深入看其他书还是有帮助的。不过这本书始终是一本入门介绍教材，希望用它来强化概率论知识是不太可能了，而且本书也没有多少习题。总的来说，本书适合初学者，以及哪些忘得快差不多想要复习一下概率论相关知识的朋友。</p>
+                <h2 id="阶段总结"><a href="#阶段总结" class="headerlink" title="阶段总结"></a>阶段总结</h2><p>研究生刚入学一月，脱离了家中的休闲模式，借着学校的气氛重新开始学习。</p>
+<p>虽然换了一茬人，但身边大部分同学依然不理解我为什么要学这些专业无关的东西，虽然目前没有具体的目标，但是至少我感觉我在脚踏实地地积累自己。而且前路无疑是艰辛的，就建筑类专业典型路线来看，我已经基本偏航了，但是我内心的方向尤存，而不是像还在学设计时那样，虽然路径早就帮你准备好了，但你内心却没有方向。</p>
+<p>人所有的选择都会朝着最小阻力路径前行。时时刻刻内心都会喊出“我不想努力了！”这句话。但人贵在有选择的能力，我选择继续走自己的路，而不是在既有路径里挑一条最好的。西部世界第三季里，Delores提到为什么选择小粉，是因为看中了小粉有选择的能力。我希望我可以继续保持我自己的选择，在森林里走出自己的路。</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2020/09/25/reading：Linux-C一站式编程-C语言部分/" data-toggle="tooltip" data-placement="top"
-                           title="reading：Linux_C一站式编程_C语言部分">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2020/09/07/课程missing_semester/" data-toggle="tooltip" data-placement="top"
-                           title="course missing semester">Next Post &rarr;</a>
+                        <a href="/2020/10/27/reading：现代设计的先驱者/" data-toggle="tooltip" data-placement="top"
+                           title="reading：现代设计的先驱者">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -292,7 +229,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：程序员的数学-概率统计"><span class="toc-text">读书笔记：程序员的数学 概率统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内容"><span class="toc-text">内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一、二章-概率定义-多随机变量"><span class="toc-text">第一、二章 概率定义 多随机变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三、四章-离散、连续分布"><span class="toc-text">第三、四章   离散、连续分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五章-协方差矩阵与多元正态分布"><span class="toc-text">第五章 协方差矩阵与多元正态分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第六、七章-估计与检验-伪随机数"><span class="toc-text">第六、七章 估计与检验 伪随机数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第八章-各类应用"><span class="toc-text">第八章 各类应用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#体会"><span class="toc-text">体会</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#阶段总结"><span class="toc-text">阶段总结</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -313,9 +250,6 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
                         
                     </div>
                 </section>
@@ -445,35 +379,6 @@
     })
 </script>
 
-
-<!-- mathjax -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-        processEscapes: true
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    }});
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 
 <!-- Google Analytics -->

@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        reading:程序员的线性代数｜Alex Shen&#39;s blog
+        Alex Shen&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://1153470104.github.io/2020/08/23/reading：程序员的数学线性代数/">
+    <link rel="canonical" href="https://1153470104.github.io/tags/math/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -60,7 +60,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="true
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -149,172 +149,169 @@
 
 <!-- Main Content -->
 
-<!--only post-->
 
-
-<img class="wechat-title-img"
-     src="nullhttps://res.cloudinary.com/shen0334/image/upload/v1598495304/reading2_linear_algebra_wkbhuo.jpg">
-
-
-<style>
-    
-    header.intro-header {
-        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1598495304/reading2_linear_algebra_wkbhuo.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
-    }
-
-    
-</style>
-
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>reading:程序员的线性代数</h1>
-                    
-                    <h2 class="subheading">线性代数基础温习巩固良药</h2>
-                    
-                    <span class="meta">
-                         作者 Alex Shen
-                        <span>
-                          日期 2020-08-23
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
-                        
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg"/>
+                        <h5><a href="/about/">Alex Shen</a></h5>
+                        <p></p>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     </div>
-    <div class="post-title-haojen">
-        <span>
-            reading:程序员的线性代数
-        </span>
-    </div>
-</header>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <a id="more"></a>
-<h2 id="读书笔记：程序员的数学-线性代数"><a href="#读书笔记：程序员的数学-线性代数" class="headerlink" title="读书笔记：程序员的数学 线性代数"></a>读书笔记：程序员的数学 线性代数</h2><p>看这本书的原因和上一本微积分相同，因为对线代非常生疏了。就看一下这本很多人给新手推荐的线性代数入门书籍，讲的也确实通俗易懂。</p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>本书面向非数学专业，作者自己强调这是一本描述如何使用线性代数、在哪里用的书籍。所以本书围绕着几大问题展开，读起来非常顺畅，即：<strong>如何解线性方程组</strong>、<strong>矩阵稳定性的判断</strong>、<strong>如何求解特征值特征向量</strong>。一些概念都从这几个问题展开来提出，我感觉是便于我理解整本书的内容，以及记忆线性代数的知识点的。</p>
-<h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h3><ul>
-<li><p>第一章：基础知识</p>
-<p>先介绍一些基本概念，基底、维数、坐标</p>
-<p>随后介绍了矩阵即映射的结论、介绍各类矩阵、展示了如何用矩阵来表达各类关系</p>
-<p>然后介绍行列式，解释行列式等同于扩大率，然后讲解行列式计算方法。</p>
-</li>
-<li><p>第二章：线性方程组计算和良性恶性矩阵</p>
-<p>先定义良性矩阵、恶性矩阵</p>
-<p>良性线性方程组解法：消去法、Gauss-Jordan法，介绍逆矩阵的求解法，最后说明一下初等变换。</p>
-<p>解释恶性问题，提出kernel核、image祥概念、秩rank和维数定理</p>
-<p>良性和恶性的判断、可逆性的等价条件介绍，然后有一些恶性问题例子</p>
-</li>
-<li><p>第三章：数值计算（LU分解）</p>
-<p>引出LU分解</p>
-<p>怎么LU分解，怎么用它求行列式、求解线性方程组、求逆矩阵</p>
-<p>最后讨论意外情况</p>
-</li>
-<li><p>第四章：失控性</p>
-<p>提出稳定性的问题</p>
-<p>考虑可对角化情况，从变量替换、坐标变换、乘方考虑</p>
-<p>提出特征值、特征向量，以及计算方法</p>
-<p>介绍了一个连续时间系统的例子</p>
-<p>考虑不可对角化的情况，介绍jordan标准型</p>
-<p>jordan标准型的用法，以及划归为jordan标准型的方法，最后证明所有方阵均可Jordan标准型。</p>
-</li>
-<li><p>第五章：特征值计算法</p>
-<p>介绍伽罗华理论，5X5以上矩阵无通用解</p>
-<p>介绍jacobi方法，其中的平面旋转以及优化方法</p>
-<p>先提出幂法、QR分解</p>
-<p>再介绍QR方法、Hessenberg矩阵、Householder方法和海森伯格矩阵的QR迭代，一些技巧和反幂法</p>
-</li>
+
+
+<div class="post-preview "
+     style="background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1603796808/reading6_new_math_analysis_band_dxhs7d.jpg')">
+    <a href="/2020/10/27/reading：数学分析新讲第一册/">
+        <h2 class="post-title">
+            reading：数学分析新讲第一册
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2020-10-27
+        </p>
+        
+        <h3 class="post-subtitle">
+            沉潜书中，听大师教诲
+        </h3>
+        
+        <!--<div class="post-content-preview">
+            <p>
+                
+            </p>
+        </div> -->
+        <div class="post-content-preview">
+            <p>
+                读书笔记：数学分析新讲第一册最近在阅读张筑生老师的数学分析新讲，这本书本来就是看到很多人推荐的，正好我想好好巩固一下数学分析，所以从第一册开始啃。现在读毕首册，偶然了解了张筑生老师的生平故事，颇为感动。只感觉有幸能够阅读到老师的书籍，作为一个后世的学子在书中聆听大师的教诲。这里顺便附一下豆瓣上转..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    
 </ul>
-<h3 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h3><p>和普林斯顿微积分一样，这本书不是一本数学教材，感觉更像是一本保姆级的线代指南。很适合初学者以及忘得差不多的人学习。没有多少例题，看起来非常快。用来温习一遍或者梳理线代基础知识点非常不错。</p>
-<h3 id="附：书内具体理论"><a href="#附：书内具体理论" class="headerlink" title="附：书内具体理论"></a>附：书内具体理论</h3><p>TODO</p>
 
-                <hr>
-                
 
-                <ul class="pager">
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
                     
-                    <li class="previous">
-                        <a href="/2020/09/07/课程missing_semester/" data-toggle="tooltip" data-placement="top"
-                           title="course missing semester">&larr; Previous Post</a>
-                    </li>
+                    <img src="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg"/>
                     
+                    <h5><a href="/about/">Alex Shen</a></h5>
                     
-                    <li class="next">
-                        <a href="/2020/08/16/reading：普林斯顿微积分读本/" data-toggle="tooltip" data-placement="top"
-                           title="reading：普林斯顿微积分读本">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
+                        
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://www.zhihu.com/people/qi-zhi-zou-nuan">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        </span>
+                            </a>
+                        </li>
+                        
 
-                
+                        
 
-                
+                        
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/沈孫樂">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
 
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/1153470104">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
 
-                <!--加入新的评论系统-->
-                
-
-                
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：程序员的数学-线性代数"><span class="toc-text">读书笔记：程序员的数学 线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要内容"><span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#体会"><span class="toc-text">体会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附：书内具体理论"><span class="toc-text">附：书内具体理论</span></a></li></ol></li></ol>
+                        
+                    </ul>
                 </div>
-            </div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
+            
+            <section>
+                <div class="tags">
+                    
+                    
+                    <a href="/tags/#reading" title="reading"
+                       rel="4">reading</a>
+                    
+                    
+                    
+                    <a href="/tags/#CS" title="CS"
+                       rel="6">CS</a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/tags/#LA" title="LA"
+                       rel="3">LA</a>
+                    
+                    
+                </div>
+            </section>
+            
+
+            
+
         </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="/tags/">FEATURED TAGS</a>
-                    </h5>
-                    <div class="tags">
-                        
-                        <a class="tag" href="/tags/#reading"
-                           title="reading">reading</a>
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
     </div>
-</article>
-
-
-
-
-
-
+</div>
 
 <!-- Footer -->
 <!-- Footer -->
