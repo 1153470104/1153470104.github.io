@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165411529-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165411529-1');
+</script>
+
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="沈孙乐在 Github 上的个人博客">
+    <meta name="keyword" content="见树又见林">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="Alex Shen" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        reading：高等代数上册｜Alex Shen&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://1153470104.github.io/2021/01/30/reading：高等代数上册/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="/css/syntax.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('') bottom center
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Alex Shen
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="nullhttps://res.cloudinary.com/shen0334/image/upload/v1612003883/reading7attackonalgebra_l2qyhj.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('https://res.cloudinary.com/shen0334/image/upload/v1612003883/reading7attackonalgebra_l2qyhj.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>reading：高等代数上册</h1>
+                    
+                    <h2 class="subheading">学一门工具</h2>
+                    
+                    <span class="meta">
+                         作者 Alex Shen
+                        <span>
+                          日期 2021-01-30
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#reading"
+                           title="reading">reading</a>
+                        
+                        <a class="tag" href="/tags/#CS"
+                           title="CS">CS</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            reading：高等代数上册
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="读书笔记：高等代数-上册"><a href="#读书笔记：高等代数-上册" class="headerlink" title="读书笔记：高等代数 上册"></a>读书笔记：高等代数 上册</h2><p>既然是从头开始捞起，就绕不过线性代数。虽然有诸如David Lay的线性代数及其应用、Gilbert Strang的线性代数导论这种公认的线性代数优秀教材，由于受到 <a href="https://blog.csdn.net/ctrigger/article/details/93218931" target="_blank" rel="noopener">https://blog.csdn.net/ctrigger/article/details/93218931</a> （转载，原出处不明） 这篇博文的影响，我还是决心看一本起名是高等代数的教材，最终在图书馆中找到了1996年版邱维声老师编著的高等代数上下册。它的口碑貌似不错，我因此选定了这本。我对于本书的笔记和数学分析新讲一样，分书的册数来写，所以这次只是对于高等代数上册的一些理解和笔记。</p>
+<h3 id="内容-amp-特点-amp-体会"><a href="#内容-amp-特点-amp-体会" class="headerlink" title="内容&amp;特点&amp;体会"></a>内容&amp;特点&amp;体会</h3><p>大一的时候上是上过线性代数，但因为建院不用到，所以到后来真的连矩阵乘法都记不起来，可见练习使用的重要性。现在看书的时候也担心因为光看不练，并不能掌握得好。好在本书有充分的习题来练习（虽然也没有做很多），但相比数学分析新讲是可以有更多练习机会了。丘老的高等代数版本很多，习题集也很多，以后有时间可以做做。同时这本书的讲解也会和习题联系，经常出现后文的证明需要用到前几节习题中的结论。</p>
+<p>这本书作为丘老自己课程的教材，写的也是非常循序渐进，至少我在看的过程中没有遇到不能理解的问题。上册在介绍完基本的线性方程组和矩阵知识后再介绍了几个分类关系。毕竟只是一个上册，给人一种点了各种技能、过了各种任务，准备好去下册打boss的感觉。所以这里就不多分析这些。</p>
+<p>在学习线性代数的过程中，总感觉怪怪的，就比如矩阵的计算方法和其他的数学不一样，很难直观地体会并且猜测结果，至少对我来说非常反直觉。本科没好好学线代，但还是记得老师所说的两句话：线代要当成工具来用；手不要生要勤练。所以或许我学完下册，了解更多、练习更多之后就会有更好的理解吧。</p>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><p>照例附上看书时的一些记录，如有谬误敬请指正！</p>
+<h4 id="第一章-线性方程组的解法"><a href="#第一章-线性方程组的解法" class="headerlink" title="第一章 线性方程组的解法"></a>第一章 线性方程组的解法</h4><ul>
+<li>增广矩阵、系数矩阵、线性方程组的初等变换是什么</li>
+<li>如何判断阶梯型方程组解的个数</li>
+<li>数域的定义是什么，数域的封闭性是什么</li>
+<li>齐次线性方程组是什么</li>
+</ul>
+<h4 id="第二章-方阵的行列式"><a href="#第二章-方阵的行列式" class="headerlink" title="第二章 方阵的行列式"></a>第二章 方阵的行列式</h4><ul>
+<li>排列的逆序数是什么，偶排列 / 奇排列是什么</li>
+<li>对换如何改变n元排列的奇偶性</li>
+<li>n级矩阵行列式的定义是什么 / det映射是什么</li>
+<li>上下三角矩阵、对角矩阵、单位矩阵分别是什么</li>
+<li>转置矩阵、三种初等变换后行列式如何变化，如何证明</li>
+<li>行列式如何按一行展开，如何应用于行列式的计算中</li>
+<li>范德蒙矩阵是什么，行列式等于多少，如何证明</li>
+<li>n级行列式计算技巧有哪些：化归、递归、应用特殊矩阵等等</li>
+<li>k级子式的代数余子式是什么</li>
+<li>拉普拉斯定理是什么，如何证明</li>
+<li>行列式的几何意义是什么，如何证明</li>
+</ul>
+<h4 id="第三章-n维向量空间-线性方程组理论"><a href="#第三章-n维向量空间-线性方程组理论" class="headerlink" title="第三章 n维向量空间 线性方程组理论"></a>第三章 n维向量空间 线性方程组理论</h4><ul>
+<li><p>什么是n维向量空间，及什么是它的线性子空间，由$\alpha_1,\alpha_2,…,\alpha_s$张成的子空间$&lt;\alpha_1,\alpha_2,…,\alpha_s&gt;$与该向量组的关系</p>
+</li>
+<li><p>线性表出与线性方程组解的关系</p>
+</li>
+<li><p>共面、共线的代数本质是什么， 什么是线性相关、线性关系</p>
+</li>
+<li><p>向量组整体无关，则部分无关；向量组部分相关，则整体相关</p>
+<p>向量组线性无关，则延伸组也无关；延伸组线性相关，则向量组相信相关</p>
+</li>
+<li><p>线性相关性、齐次线性方程组的解、系数矩阵的行列式 互相之间的关系</p>
+</li>
+<li><p><strong>基</strong>：向量组成为基的条件是什么，标准基是什么，坐标是什么；如何证明每个线性子空间都有一个基</p>
+</li>
+<li><p>向量组等价的条件是什么，$K^n$ 中任一线性无关向量组所含向量 $&lt;n$ 如何证明</p>
+</li>
+<li><p><strong>维数</strong>：$dimW$是什么，如何证明维数为 r 的线性子空间中 r 个线性无关向量就是它的一个基</p>
+</li>
+<li><p><strong>秩</strong>：极大线性无关向量组是什么，而向量组的秩的含义是什么</p>
+</li>
+<li><p>矩阵的初等变换是否改变矩阵的行秩、列秩？行秩列秩如何证明其相等</p>
+</li>
+<li><p>矩阵的秩、行列式、r级子式的关系是什么，如何利用子式求极大线性无关组</p>
+</li>
+<li><p>线性方程组有解的充要条件为系数矩阵与增广矩阵的秩相等，如何证明；系数矩阵秩与未知量个数与解的关系</p>
+</li>
+<li><p><strong>齐次线性方程组</strong>：基础解系是什么；基础解系的维度 = n - r 如何证明</p>
+</li>
+<li><p><strong>非齐次线性方程组</strong>：导出组是什么，线性流型 是什么，如何求非齐次线性方程组的解？</p>
+</li>
+<li><p>n个平面，通过一条直线但步合并为一个平面的充要条件是什么</p>
+</li>
+</ul>
+<h4 id="第四章-矩阵的运算"><a href="#第四章-矩阵的运算" class="headerlink" title="第四章 矩阵的运算"></a>第四章 矩阵的运算</h4><ul>
+<li>如何证明一个映射是单设或者满射</li>
+<li>左右零因子、平凡零因子、单位矩阵、数量矩阵、基本矩阵、对角矩阵、上下三角矩阵、对称矩阵、斜对称矩阵 是什么</li>
+<li>如何证明矩阵乘积的秩小于等于作为乘子的矩阵的秩</li>
+<li>矩阵分块后相乘的条件有哪两个</li>
+<li>分块对角矩阵、分块上三角矩阵的运算规则、行列式计算规则；分块矩阵的三种初等行变换 是什么</li>
+<li>什么是退化的仿真，方阵不退化、方阵乘积不退化的条件是什么</li>
+<li>$A B$为同级方阵则$|AB|=|A||B|$，如何证明</li>
+<li>当$A B$不是方阵时，乘积的行列式计算公式$Binet-Cauchy$公式是什么，如何证明，如何用于矩阵各级子式的计算</li>
+<li>方阵可逆的充要条件是什么，有哪些等价的推论</li>
+<li>伴随矩阵的定义是什么，当A可逆时逆矩阵的公式是什么，如何利用它证明crammer法则</li>
+<li>矩阵求逆的方法有哪些？（书中五种）</li>
+<li>正交矩阵、标准正交基、欧氏空间、正交向量组、正交单位向量组的概念是什么</li>
+<li>如何通过$Gram-Schmidt$正交化过程把线性无关向量组变为正交单位向量组</li>
+</ul>
+<h4 id="第五章-矩阵的相抵分类与相似分类"><a href="#第五章-矩阵的相抵分类与相似分类" class="headerlink" title="第五章 矩阵的相抵分类与相似分类"></a>第五章 矩阵的相抵分类与相似分类</h4><ul>
+<li>研究矩阵的分类是为了研究某一类矩阵之间的共同性质并加以利用</li>
+<li>二元关系是什么，等价关系成立的三条原则是什么，等价和划分的关系，等价关系的不变量与完全不变量，商集是什么</li>
+<li>声明是矩阵相抵、相抵标准形</li>
+<li>广义逆矩阵的公式是什么，如何证明</li>
+<li>线性方程组相容的定义是什么，如何利用广义逆矩阵进行：<ol>
+<li>非齐次方程组有解的证明</li>
+<li>非齐次方程组通解的计算与证明</li>
+<li>齐次方程组通解的计算与证明</li>
+</ol>
+</li>
+<li>$Moore-Penrose$ 广义逆矩阵是什么</li>
+<li>矩阵相似的定义，相似矩阵行列式、秩、迹的关系，可对角化的定义，相似标准形是什么</li>
+<li>特征多项式是什么，特征值的特征子空间是什么</li>
+<li>相似矩阵的特征多项式、特征值相同，如何证明</li>
+<li>如何计算n级矩阵的各项系数？</li>
+<li>不同特征值的特征向量线性无关如何证明</li>
+<li>幂等矩阵是什么，为何一定可以对角化，它的标准形是什么</li>
+<li>如何证明矩阵$AB$、$BA$是相同的非零特征值，重数也相同</li>
+<li>声明是特征值的几何重数、代数重数，如何证明几何重数 &lt; 代数重数</li>
+<li>如何证明实对称矩阵的复数域中每个根都是实数，而且不同特征值的特征向量都是正交的</li>
+<li>正交相似是什么，如何证明实对称矩阵一定可以相似于一个对角矩阵</li>
+</ul>
+<h4 id="第六章-二次型-矩阵的合同分类"><a href="#第六章-二次型-矩阵的合同分类" class="headerlink" title="第六章 二次型 矩阵的合同分类"></a>第六章 二次型 矩阵的合同分类</h4><ul>
+<li>二次型的定义是什么，二次型与二次型矩阵如何互相转换</li>
+<li>什么是非退化的线性替换，什么是矩阵的合同关系，什么是二次型的等价关系</li>
+<li>什么是：二次型的标准形、矩阵的合同标准形</li>
+<li>如何证明：任何一个二次型都能经过非退化的线性替换编程只含平方项的二次型，即任一对称矩阵都合同于一个对角矩阵</li>
+<li>矩阵的成对初等行、列变换法是什么</li>
+<li>什么是实、复二次型的规范形，秩为什么是n级复对称矩阵的集合在合同关系下的完全不变量</li>
+<li>惯性定理是什么，如何证明规范形的唯一性，正、负惯性指数、符号差是什么</li>
+<li>正交的线性替换是什么，如何证明 $\frac{\alpha’A\alpha}{|\alpha|^2}$ 的值大于等于矩阵A最小的特征值，且小于等于最大的特征值</li>
+<li>对称矩阵正定、半正定、负定、半负定、不定的定义是什么</li>
+<li>如何从二次型、正惯性指数、合同规范形、合同标准形、特征值、顺序主子式六个方面判断实对称矩阵是正定的，如何证明</li>
+<li>如何证明实对称矩阵A实半正定的充要条件为A的所有主子式都非负</li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/12/04/reading：剑指Offer/" data-toggle="tooltip" data-placement="top"
+                           title="reading：剑指Offer">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记：高等代数-上册"><span class="toc-text">读书笔记：高等代数 上册</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内容-amp-特点-amp-体会"><span class="toc-text">内容&amp;特点&amp;体会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附录"><span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一章-线性方程组的解法"><span class="toc-text">第一章 线性方程组的解法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二章-方阵的行列式"><span class="toc-text">第二章 方阵的行列式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三章-n维向量空间-线性方程组理论"><span class="toc-text">第三章 n维向量空间 线性方程组理论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四章-矩阵的运算"><span class="toc-text">第四章 矩阵的运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五章-矩阵的相抵分类与相似分类"><span class="toc-text">第五章 矩阵的相抵分类与相似分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第六章-二次型-矩阵的合同分类"><span class="toc-text">第六章 二次型 矩阵的合同分类</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#reading"
+                           title="reading">reading</a>
+                        
+                        <a class="tag" href="/tags/#CS"
+                           title="CS">CS</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/qi-zhi-zou-nuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/沈孫樂">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/1153470104">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Alex Shen 2021
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/" target="_blank" rel="noopener">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://1153470104.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    }});
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-165411529-1';
+    var _gaDomain = 'auto';
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="https://res.cloudinary.com/shen0334/image/upload/v1588380765/Avatar_ihqxjd.jpg">
+</body>
+
+</html>
